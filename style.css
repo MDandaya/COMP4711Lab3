@@ -1,0 +1,37 @@
+
+body {
+    font-family: 'Alata', sans-serif;;
+    text-align: center;
+}
+
+.hover:hover {
+    background-color: gray;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item {
+    margin: auto;
+    padding: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: gray;
+    max-width: 30%;
+    text-align: left;
+}
+
+.flex-item > img {
+    border-radius: 20%;
+    float: left;
+}
+
+.flex-item .description {
+    padding: 10px;
+    float: left;
+    text-align: left;
+}
+
+
