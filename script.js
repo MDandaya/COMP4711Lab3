@@ -11,10 +11,12 @@ function createArtistParams() {
     let fieldName = document.createElement("input");
     fieldName.setAttribute("id", "field-name");
     fieldName.setAttribute("placeholder", "Artist Name")
+    fieldName.setAttribute("maxlength", "40")
 
     let fieldAbout = document.createElement("input");
     fieldAbout.setAttribute("id", "field-about");
     fieldAbout.setAttribute("placeholder", "About Artist")
+    fieldAbout.setAttribute("maxlength", "40");
 
     let fieldImage = document.createElement("input");
     fieldImage.setAttribute("id", "field-image");
@@ -33,7 +35,7 @@ function createArtistParams() {
 
     let top = document.getElementById("top").appendChild(addDiv);
 }
-
+  
 function addArtist() {
     let name = document.getElementById("field-name").value;
     let about = document.getElementById("field-about").value;
@@ -41,7 +43,7 @@ function addArtist() {
 
     let card = document.createElement("div");
     card.setAttribute("class", "flex-item hover");
-    
+
     let image = document.createElement("img");
     image.setAttribute("src", imageurl);
 
@@ -54,25 +56,31 @@ function addArtist() {
 
     let br = document.createElement("br");
 
+    let span = document.createElement("span");
+
     let abouttext = document.createTextNode(about);
 
     let delButton = document.createElement("input");
+    delButton.setAttribute("class", "del-button");
     delButton.setAttribute("type", "button");
-    delButton.setAttribute("value", "Delete")
+    delButton.setAttribute("value", "delete");
+    delButton.setAttribute("onclick", "deleteNode(this)");
 
+    span.appendChild(abouttext);
     boldnode.appendChild(nametext);
     description.appendChild(boldnode);
     description.appendChild(br);
-    description.appendChild(abouttext);
+    description.appendChild(span);
     card.appendChild(image);
     card.appendChild(description);
-    card.appendChild(delButton); 
+    card.appendChild(delButton);
 
     let container = document.getElementById("flex-container").appendChild(card);
     document.querySelector('#add-div').remove();
 
 }
 
-function deleteNode() {
-    alert(this.value);
+function deleteNode(child) {
+    child.parentNode.remove();
+    
 }
