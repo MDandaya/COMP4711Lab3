@@ -3,49 +3,33 @@
     <head>
         <title>Artist App</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
     </head>
 
     <body>
 
-        <div class="flex-item">
-            <h3>Artist Directory</h3>
+        <div id="top">
+            <h2>Artist Directory</h2>
             <input type="text" placeholder="">
+            <button onclick="createArtistParams()">Add Artist</button>
         </div>
 
-        <div class="flex-container">
+        <div id="flex-container">
 
             <div class="flex-item hover">
 
-                <img src="https://randomuser.me/api/portraits/med/men/1.jpg" class="profileimage">
+                <img src="https://randomuser.me/api/portraits/med/men/1.jpg">
 
-                <div class="description">
+                <div class = "description">
                     <strong>Barret Bellingham</strong><br>
-                    Royal Academy of Painting and Culture
+                    <span>Royal Academy of Painting and Culture and more stuff lol</span>
                 </div>
-
-            </div>
-            <div class="flex-item hover">
-
-                <img src="https://randomuser.me/api/portraits/med/men/1.jpg" class="profileimage">
-
-                <div class="description">
-                    <strong>Barret Bellingham</strong><br>
-                    Royal Academy of Painting and Culture
-                </div>
-
-            </div>
-            <div class="flex-item hover">
-
-                <img src="https://randomuser.me/api/portraits/med/men/1.jpg" class="profileimage">
-
-                <div class="description">
-                    <strong>Barret Bellingham</strong><br>
-                    Royal Academy of Painting and Culture
-                </div>
-
+                <input class="del-button" type="button" value="delete">
             </div>
 
         </div>
+        
     </body>
 </html>
